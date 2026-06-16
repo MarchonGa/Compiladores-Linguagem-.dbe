@@ -1,0 +1,58 @@
+INICIO
+
+inteiro precisao = 100000
+inteiro i = 1
+inteiro sinal = 1
+
+real soma = 0
+real aux = 0
+real pi = 0
+
+when (i < precisao) {
+    aux = sinal * 1.0/i
+    soma = soma + aux
+    sinal = sinal * -1
+
+    i = i + 2
+}
+
+pi = soma * 4
+
+escrever("PI aproximado: ", pi, BK)
+
+
+real cx=0, cy=0, raio=0, area=0
+
+ler(cx)
+ler(cy)
+ler(raio)
+area=pi *raio*raio
+
+escrever("O raio do Circulo é ", area, BK)
+
+real hx=0, hy=0;
+ler(hx)
+ler(hy)
+
+real dx=0,dy=0
+
+dx = hx - cx
+dy = hy - cy
+real dist2=0, raio2=0
+
+dist2 = dx * dx + dy * dy
+raio2 = raio * raio
+
+escrever("Distancia ao quadrado: ", dist2, BK)
+escrever("Raio ao quadrado: ", raio2, BK)
+
+SE (dist2 <= raio2) {
+    escrever("Resultado: A habilidade ACERTOU a hitbox.", BK)
+} SENAO {
+    escrever("Resultado: A habilidade ERROU a hitbox.", BK)
+    SE(1==1){
+        escrever("ola")
+    }
+}
+
+FIM
